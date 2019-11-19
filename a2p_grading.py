@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-
+'''Prelimary grading script for assignment 2P
+   more tests are pending
+'''
 import sys
 
 student_id = 'rchan'
