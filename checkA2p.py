@@ -74,7 +74,8 @@ try:
    tomorrow_date = d1.tomorrow()
 except:
    print('Error calling tomorrow method.')
-   sys.exit(5)
+   tomorrow_date = 'Does not compute.'
+#   sys.exit(5)
 
 if str(tomorrow_date) != '2019/03/01':
    print('Incorrect result from tomorrow method -->',str(tomorrow_date))
@@ -87,7 +88,8 @@ try:
    yesterday_date = d1.yesterday()
 except:
    print('Error calling yesterday method.')
-   sys.exit(6)
+   yesterday_date = 'Does not compute.'
+#   sys.exit(6)
 
 if str(yesterday_date) != '2019/02/27':
    print('Incorrect result from yesterday method -->',str(yesterday_date))
@@ -100,7 +102,8 @@ try:
    dow_date = d1.day_of_week()
 except:
    print('Error calling day_of_week method.')
-   sys.exit(7)
+   dow_date = '-1'
+#   sys.exit(7)
 
 if dow_date != 4:
     print('Incorrect result from day_of_week method -->',dow_date)
