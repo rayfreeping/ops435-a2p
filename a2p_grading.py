@@ -38,31 +38,35 @@ for testno in range(1,15):
     str_test_ys = '%.4d/%.2d/%.2d' % test_ys
     y,m,d = test_date
 
-    date1 = Date(y,m,d)
-    test_header='Testing for Date class - Test number: '+str(testno)
-    print(test_header)
-    print(len(test_header)*'-')
+    try:
+        date1 = Date(y,m,d)
+        test_header='Testing for Date class - Test number: '+str(testno)
+        print(test_header)
+        print(len(test_header)*'-')
 
-    test_score = 0
-    print('Test for date1:',date1)
-    print('date1  is:',date1)
-    print('  expected tomorrow should be:',test_tm)
-    print('     your date1.tomorrow() is:',date1.tomorrow())
-    if str(date1.tomorrow()) == str_test_tm:
-         test_score += 1
-         print('Test for tomorrow method: passed')
-    else:
-         print('Test for tomorrow method: failed')
-    print('  expected yesterday should be:',test_ys)
-    print('     your date1.yesterday() is:',date1.yesterday())
-    if str(date1.yesterday()) == str_test_ys:
-         test_score += 1
-         print('Test for yesterday method: passed')
-    else:
-         print('Test for yesterday method: failed')
-    print(5*' ','test result: '+str(test_score)+'/2')
-    total_test_score += test_score
-    print(50*'=')
+        test_score = 0
+        print('Test for date1:',date1)
+        print('date1  is:',date1)
+        print('  expected tomorrow should be:',test_tm)
+        print('     your date1.tomorrow() is:',date1.tomorrow())
+        if str(date1.tomorrow()) == str_test_tm:
+             test_score += 1
+             print('Test for tomorrow method: passed')
+        else:
+             print('Test for tomorrow method: failed')
+        print('  expected yesterday should be:',test_ys)
+        print('     your date1.yesterday() is:',date1.yesterday())
+        if str(date1.yesterday()) == str_test_ys:
+             test_score += 1
+             print('Test for yesterday method: passed')
+        else:
+             print('Test for yesterday method: failed')
+        print(5*' ','test result: '+str(test_score)+'/2')
+        total_test_score += test_score
+        print(50*'=')
+    except:
+          
+        print('\n==========> Test number',testno,'failed. <==========\n')
 
 print('Maximum total test score:',len(test_dates)*2)
 print('Total test score for this test run:',total_test_score)
